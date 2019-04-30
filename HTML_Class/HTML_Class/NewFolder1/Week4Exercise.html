@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script type="text/javascript">
+
+      /* your code */
+
+        function calculate() {
+           
+            var endNum = fib.value;
+            var prev1 = 1;
+            var prev2 = 0;
+            var count = 0;
+            
+           document.write(prev1 + "<br/>");
+                   
+           while (count < endNum) {
+               start = prev1 + prev2;
+               document.write(start + "<br/>");
+               prev2 = prev1;
+               prev1 = start;
+               count++;
+           }
+                
+        }
+
+        function calculateSeconds() {
+
+            var hours = hr.value;
+            var minutes ;
+            minutes = (hours * 60) + min.value;
+            
+
+            document.write(minutes * 60 + "<br/>");
+
+        
+
+        }
+        
+
+    </script>
+
+
+</head>
+<body>
+    <form>
+
+        <input type="text" id="fib" />
+        <input type="button" value="Fibonacci Series" onclick="calculate()" /><br /><br /><br /><br />
+
+        <!--<label id="l1">This is a label.</label><br /><br />-->
+
+
+
+        <input type="text" id="hr" /> <input type="text" id="min" />
+        <input type="button"  value="Number of seconds" onclick="calculateSeconds()" /><br />
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>My page for Java script</title>
+    <!-- External java script-->
+    <script src="html/HelloWorld.js" type="text/javascript"></script>
+    <!--internal java script-->
+    <script type="text/javascript">
+
+        function sayHello() {
+            alert("Hello there");
+        }
+
+        function sayHello2(name, age) {
+            var full;
+            document.write(name + " is " + age + " years old!");
+        }
+
+        function concatenate(first, last) {
+            var full = first + " " + last;
+            return full;
+
+        }
+        function secondFunction() {
+            result = concatenate('Zara', 'Ali');
+            document.write(result);
+        }
+
+        function validate() {
+            /*Rule: the email should have an @ first, and then a '.' (period). */
+            var emailId = document.getElementById("t1").value;
+            var ratePosition = emailId.indexOf("@");
+            if (ratePosition > -1) {
+                if (".") ratePosition + 1)) {
+                    document.getElementById("l1").innerText = "Email is not valid, '.' is missing"
+                }
+            }
+            else {
+                document.getElementById("l1").innerText = "Email is not correct, no @.";
+            }
+        }
+
+    </script>
+    
+
+    
+  <noscript>Javascript is disabled</noscript> 
+</head>
+<body>
+
+    <form>
+        <input type="button" id="b1" value="Validate email" onclick="validate()" /><br/>
+        <input type="text" id="t1" /><br />
+        <label id="l1">This is a label.</label><br /><br />
+        <input type="button" onclick="secondFunction()" value="Second Function Call" /><br />
+        <input type="button" onclick="sayHello()" value="Say Hello" /><br />
+        <input type="button" onclick="sayHello2('Zara',7)" value="Say Hello Function" />
+    </form>
+
+    <p onmouseover="Eventhandler()">Bring your mouse here to see an alert</p>
+    <h1>A web page</h1>
+    <p id='demo'>A paragraph</p>
+    <by />
+    <button type="button" onclick="MyFunction()">Try it</button>
+    <script type="text/javascript">
+        function MyFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed";
+        }
+    </script>
+
+    <script type="text/javascript">
+        var book = "math";
+        if (book == "history") {
+            document.write("<b>History book</b>");
+
+        }
+        else if (book == "math") {
+            document.write("<b>Math book</b>");
+        }
+        else {
+            document.write("<b>Unknown book</b>");
+        }
+    </script>
+
+    <script type="text/javascript">
+        //while loop
+        var count = 0;
+        while (count < 10) {
+            document.write("Current count: <i>" + count + "</i><br/>");
+            count++
+        }
+        document.write("Loop ends");
+    </script>
+    <p>
+        <script type="text/javascript">
+            var book = "math";
+            if (book == "history") {
+                document.write("<b>History book</b>");
+            }
+            else if (book == "math") {
+                document.write("<b>Mathematics book</b>");
+            }
+            else {
+                document.write("<b>Unknown book</b>");
+            }
+
+        </script>
+    </p>
+    <p>
+        <script type="text/javascript">
+            var grade = "A";
+            document.write("<b>Entering switch block</b>");
+            switch (grade) {
+                case "A": document.write("Good<br/>")
+                    break;
+                case "B": document.write("Decent<br/>")
+                    break;
+                case "C": document.write("Passed<br/>")
+                    break;
+                default: document.write("Unknown<br/>")
+
+            }
+
+        </script>
+
+    </p>
+    <p>
+        <script type="text/javascript">
+            //for loop
+            var count;
+            document.write("entering loop");
+            for (count = 0; count < 10; count++) {
+                document.write("Current count=" + count + "<br/>")
+            }
+        </script>
+    </p>
+
+</body>
+</html>
